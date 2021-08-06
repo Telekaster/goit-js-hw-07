@@ -1,17 +1,17 @@
 const input = document.querySelector('input');
-console.log(input);
+
+const validationNumber = Number(input.getAttribute('data-length'));
+
 
 function lengthCheck(event) {
 
-    console.log(input.value.length);
+    if (input.value.length !== validationNumber) {
 
-    if (input.value.length !== 6) {
-        console.log(false);
-        input.classList.add('invalid')
+        input.classList.add('invalid');
 
     } else {
-        console.log(true);
-        input.classList.replace('invalid', 'valid')
+       
+        input.classList.replace('invalid', 'valid');
     }
 }
 

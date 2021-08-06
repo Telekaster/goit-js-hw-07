@@ -5,7 +5,11 @@ const output = document.querySelector('#name-output');
 
 function transform(event) {
 
-    output.textContent = event.currentTarget.value;
+    if (input.value === '') {
+        output.textContent = 'незнакомец';
+    } else {
+        output.textContent = event.currentTarget.value;
+    }
 }
 
 
