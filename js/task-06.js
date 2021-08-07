@@ -5,13 +5,13 @@ const validationNumber = Number(input.getAttribute('data-length'));
 
 function lengthCheck(event) {
 
-    if (input.value.length !== validationNumber) {
+    input.classList.add('invalid')
 
-        input.classList.add('invalid');
 
-    } else {
-       
+    if (input.value.length === validationNumber) {
+
         input.classList.replace('invalid', 'valid');
+
     }
 }
 
